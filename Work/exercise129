@@ -1,0 +1,23 @@
+def greeting(name):
+    'Issues a greeting'
+    print('Hello', name)
+
+greeting('Guido')
+greeting('Paula')
+
+##exercise 1.30
+def portfolio_cost(filename):
+    with open(filename, 'rt') as f:
+        headers = next(f)
+        totalcost = 0
+        for line in f:
+            row = line.split(',')
+            try:
+                totalcost = totalcost + (float(row[1])*float(row[2]))
+            except:
+                print('something went wrong') 
+                continue
+        return totalcost
+cost = portfolio_cost('C:\\Users\\natha\\OneDrive\\Desktop\\practical-python\\Work\\Data\\missing.csv')
+
+print('total cost', cost)

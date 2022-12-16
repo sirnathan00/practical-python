@@ -23,7 +23,7 @@ def reverse(div,price,payout) :
         print('after ', 40-i, 'cycles','\n the payout is', payout, '\n the amount of stocks is', amount, '\n the stock is worth', value, '\n')
 
 
-reverse(0.46,30,2000)
-buyback(30,0.46,2349)
+#reverse(0.11,2.01,2000)
+buyback(35.24,1.06,1000)
 
 

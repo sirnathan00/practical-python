@@ -42,4 +42,4 @@ def parse_csv(filename, select=None, types=None, has_headers=True, delimiter=','
         
         return records
 
-print('\n', parse_csv('C:\\Users\\natha\\OneDrive\\Desktop\\practical-python\\Work\\Data\\missing.csv', types=[str, int, float], silence_errors=False))
+#print('\n', parse_csv('C:\\Users\\natha\\OneDrive\\Desktop\\practical-python\\Work\\Data\\missing.csv', types=[str, int, float], silence_errors=False))

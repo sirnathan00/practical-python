@@ -62,10 +62,32 @@ def print_report(report) :
         
 # Read data files and create the report data        
 
-portfolio = read_portfolio('C:\\Users\\natha\\OneDrive\\Desktop\\practical-python\\Work\\Data\\portfolio.csv')
-prices    = read_prices('C:\\Users\\natha\\OneDrive\\Desktop\\practical-python\\Work\\Data\\prices.csv')
+#portfolio = read_portfolio('C:\\Users\\natha\\OneDrive\\Desktop\\practical-python\\Work\\Data\\portfolio.csv')
+#prices    = read_prices('C:\\Users\\natha\\OneDrive\\Desktop\\practical-python\\Work\\Data\\prices.csv')
 
 # Generate the report data
 
-report    = make_report_data(portfolio, prices)
-print_report(report)
+#report    = make_report_data(portfolio, prices)
+#print_report(report)
+def portfolio_report(portfoliofile, pricefile):        
+    '''
+    Make a stock report given portfolio and price data files.
+    '''
+    # Read data files 
+    portfolio = read_portfolio(portfoliofile)
+    prices = read_prices(pricefile)
+
+    # Create the report data
+    report = make_report_data(portfolio, prices)
+
+    # Print it out
+    print_report(report)
+
+def main(args) :
+    if len(args) != 3:
+        raise SystemExit('Usage: %s report' % args[0])
+    portfolio_report(args[1], args[2])
+
+if __name__=='__main__':
+    import sys
+    main(sys.argv)

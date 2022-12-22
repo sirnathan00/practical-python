@@ -1,4 +1,4 @@
-class stock :
+class Stock :
     def __init__(self, name, shares, price):
         self.name = str(name)
         self.shares = int(shares)
@@ -17,3 +17,14 @@ class stock :
         this def sells the shares of a stock
         '''
         self.shares -= sell_shares
+
+class MyStock(Stock):
+    def __init__(self, name, shares, price):
+        super().__init__(name, shares, price)
+
+    def panic(self):
+        self.sell(self.shares)
+
+    def cost(self):
+        real_cost = super().cost()
+        return 1.25 * real_cost

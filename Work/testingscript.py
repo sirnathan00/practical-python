@@ -1,5 +1,6 @@
 import stock
 import report
+from datetime import date
 # a = stock.stock('GOOG', 100, 490.10)
 # b = stock.stock('AAPL', 50, 122.34)
 # c = stock.stock('IBM', 76, 91.75)
@@ -28,5 +29,30 @@ import report
 # s.panic()
 # print(s.shares)
 #print(s.cost())
-report.portfolio_report('C:\\Users\\natha\\OneDrive\\Desktop\\practical-python\\Work\\Data\\portfolio.csv', 'C:\\Users\\natha\\OneDrive\\Desktop\\practical-python\\Work\\Data\\prices.csv', 'txt')
+#report.portfolio_report('C:\\Users\\natha\\OneDrive\\Desktop\\practical-python\\Work\\Data\\portfolio.csv', 'C:\\Users\\natha\\OneDrive\\Desktop\\practical-python\\Work\\Data\\prices.csv', 'txt')
 #report.portfolio_report('Data/portfolio.csv', 'Data/prices.csv', 'txt')
+
+## everything above this is for chapter 4.2
+#-------------------------------------------------------------------------
+
+# d = date(2012, 12, 21)
+# print(d)
+# str(d)
+# print(repr(d))
+# goog = stock.Stock('GOOG', 100, 490.1)
+# print(repr(goog))
+
+# print(report.read_portfolio('C:\\Users\\natha\\OneDrive\\Desktop\\practical-python\\Work\\Data\\portfolio.csv'))
+
+# s = stock.Stock('GOOG', 100, 490.1)
+# columns = ['name', 'shares']
+# for colname in columns:
+#     print(colname, '=', getattr(s, colname))
+
+# part two of exercise 4.10
+import report
+portfolio = report.read_portfolio('C:\\Users\\natha\\OneDrive\\Desktop\\practical-python\\Work\\Data\\portfolio.csv')
+from tableformat import create_formatter, print_table
+formatter = create_formatter('txt')
+print_table(portfolio, ['name', 'shares'], formatter)
+print_table(portfolio, ['name','shares','price'], formatter)

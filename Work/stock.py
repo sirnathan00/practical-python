@@ -3,6 +3,9 @@ class Stock :
         self.name = str(name)
         self.shares = int(shares)
         self.price = float(price)
+    
+    def __repr__(self):
+        return f'Stock(\'{self.name}\', {self.shares}, {self.price})'
 
     #this function give back how much a share costs
     def cost(self) :

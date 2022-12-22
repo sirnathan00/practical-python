@@ -64,4 +64,11 @@ def create_formatter(fmt):
     else:
         raise print(f'Unknown table format {fmt}')
 
-           
+def print_table(object, headings, formatter):
+    '''
+    Print a nicely formated table from a list of (name, shares, price, change) tuples.
+    '''
+    formatter.headings(headings)
+    for obj in object:
+        rowdata = [ str(getattr(obj, heading)) for heading in headings ]
+        formatter.row(rowdata)

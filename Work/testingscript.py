@@ -50,9 +50,15 @@ from datetime import date
 #     print(colname, '=', getattr(s, colname))
 
 # part two of exercise 4.10
-import report
-portfolio = report.read_portfolio('C:\\Users\\natha\\OneDrive\\Desktop\\practical-python\\Work\\Data\\portfolio.csv')
-from tableformat import create_formatter, print_table
-formatter = create_formatter('txt')
-print_table(portfolio, ['name', 'shares'], formatter)
-print_table(portfolio, ['name','shares','price'], formatter)
+# import report
+# portfolio = report.read_portfolio('C:\\Users\\natha\\OneDrive\\Desktop\\practical-python\\Work\\Data\\portfolio.csv')
+# from tableformat import create_formatter, print_table
+# formatter = create_formatter('txt')
+# print_table(portfolio, ['name', 'shares'], formatter)
+# print_table(portfolio, ['name','shares','price'], formatter)
+
+# everything above this is from chapter 4.3
+#------------------------------------------------------------------------
+
+from tableformat import create_formatter
+formatter = create_formatter('xls')

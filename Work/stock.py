@@ -31,3 +31,8 @@ class MyStock(Stock):
     def cost(self):
         real_cost = super().cost()
         return 1.25 * real_cost
+
+class NewStock(Stock):
+    def yow(self):
+        print('Yow!')
+

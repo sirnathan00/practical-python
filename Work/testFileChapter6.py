@@ -26,12 +26,13 @@ import report
 
 # # exercise 6.2 above this
 
-import report
-portfolio = report.read_portfolio('C:\\Users\\natha\\OneDrive\\Desktop\\practical-python\\Work\\Data\\portfolio.csv')
-print(portfolio)
-print(len(portfolio))
-print(portfolio[0])
-print(portfolio[1])
-print(portfolio[0:3])
-print('IBM' in portfolio)
-print('AAPL' in portfolio)
+# import report
+# portfolio = report.read_portfolio('C:\\Users\\natha\\OneDrive\\Desktop\\practical-python\\Work\\Data\\portfolio.csv')
+# print(portfolio)
+# print(len(portfolio))
+# print(portfolio[0])
+# print(portfolio[1])
+# print(portfolio[0:3])
+# print('IBM' in portfolio)
+# print('AAPL' in portfolio)
+# # finished chapter 6.1 above

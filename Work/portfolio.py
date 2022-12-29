@@ -1,8 +1,8 @@
+
+
 class Portfolio:
     def __init__(self, holdings):
         self._holdings = holdings
-    
-    
     def __iter__(self):
         return self._holdings.__iter__()
     
@@ -12,12 +12,12 @@ class Portfolio:
     def __getitem__(self, index):
         return self._holdings[index]
     
-    def __containes__(self, name):
-        return any([s.name == name for s in self._holdings])
+    def __contains__(self, name):
+        return any(s.name == name for s in self._holdings)
     
     @property
     def total_cost(self):
-        return sum([s.cost for s in self._holdings])
+        return sum(s.cost for s in self._holdings)
 
     def tabulate_shares(self):
         from collections import Counter

@@ -1,10 +1,16 @@
+import typedproperty
+
 class Stock :
-    __slots__ = ('name', '_shares', 'price')
+    #__slots__ = ('name', '_shares', 'price')
+    name = typedproperty.String('name')
+    shares = typedproperty.Interger('shares')
+    price = typedproperty.Float('price')
+ 
     def __init__(self, name, shares, price):
         self.name = str(name)
         self.shares = shares
         self.price = float(price)
-    
+
     @property
     def shares(self):
         return self._shares
